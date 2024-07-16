@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Purple Flowers Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff; /* fallback for background color */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            position: relative;
+        }
+
+        .content {
+            z-index: 10;
+            text-align: center;
+            background: rgba(176, 45, 228, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content2 {
+            z-index: 10;
+            text-align: center;
+            background: rgba(176, 45, 228, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url(plawer.png); /* Replace this URL with your flower image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: float 10s infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Happy Monthsarry to us love lovee!!!. sorry if this is all I can 
+            <br>
+            give to you right now I hope you like the flying flowers hehe. 
+            <br>
+            I am very grateful that I get to be your boyfriend and 
+            <br>
+            now even just a month in I love you even more. 
+            <br>
+            Hoping for many more months and years to celebrate with you. 
+            <br>
+            I Love You </h1>
+        <img src="plawer 2.png">
+
+    </div>
+
+    
+
+    <!-- Flower elements -->
+    <div class="flower" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="flower" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="flower" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="flower" style="left: 70%; animation-delay: 6s;"></div>
+    <div class="flower" style="left: 90%; animation-delay: 8s;"></div>
+
+    <script>
+        // JavaScript to dynamically create more flowers
+        for (let i = 0; i < 20; i++) {
+            let flower = document.createElement('div');
+            flower.className = 'flower';
+            flower.style.left = Math.random() * 100 + '%';
+            flower.style.animationDelay = Math.random() * 10 + 's';
+            document.body.appendChild(flower);
+        }
+    </script>
+</body>
+</html>
